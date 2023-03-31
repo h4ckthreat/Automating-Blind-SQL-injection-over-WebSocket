@@ -11,7 +11,7 @@ def send_ws(payload):
 	#resp = ws.recv() # Se o servidor retornar algo como um token na conexão, você pode encontrar e extrair daqui
 	
 	# Para este caso, formatar o payload em JSON
-	message = unquote(payload).replace('"','\'') # replacing " with ' para evitar quebrar a estrutura JSON
+	message = unquote(payload).replace('"','\'') # subistituir " por ' para evitar quebrar a estrutura JSON
 	data = '{"employeeID":"%s"}' % message
 
 	ws.send(data)

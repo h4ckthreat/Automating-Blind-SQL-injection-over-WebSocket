@@ -7,11 +7,11 @@ ws_server = "ws://localhost:8156/ws"
 
 def send_ws(payload):
 	ws = create_connection(ws_server)
-	# If the server returns a response on connect, use below line	
-	#resp = ws.recv() # If server returns something like a token on connect you can find and extract from here
+	# Se o servidor retornar uma resposta ao conectar, use a linha abaixo	
+	#resp = ws.recv() # Se o servidor retornar algo como um token na conexão, você pode encontrar e extrair daqui
 	
-	# For our case, format the payload in JSON
-	message = unquote(payload).replace('"','\'') # replacing " with ' to avoid breaking JSON structure
+	# Para este caso, formatar o payload em JSON
+	message = unquote(payload).replace('"','\'') # replacing " with ' para evitar quebrar a estrutura JSON
 	data = '{"employeeID":"%s"}' % message
 
 	ws.send(data)

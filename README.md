@@ -1,4 +1,5 @@
 # <i> Script de automatização para Blind SQL injection over WebSocket</i>👨🏻‍💻
+Este script é uma ferramenta para realizar teste de websocket com vulnerabilidade de SQL Injection deixando ele mais otimizado no pentester.
 
 <h4 align="center">
 
